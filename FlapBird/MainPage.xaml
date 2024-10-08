@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapBird.MainPage">
+
+    <Grid>
+        <Image Source="fundo.png"
+            Aspect="AspectFit"/>
+
+        <Image Source="CanoBaixo.png"
+             Aspect="AspectFit"/>
+
+        <Image Source="CanoCima.png"
+             Aspect="AspectFit"/>
+
+        <Image Source="Passaro.png"
+             Aspect="AspectFit"/>
+
+        <Image Source="Chao.png"
+             Aspect="AspectFit"/>
+
+        <Frame>
+            <Image Source="GameOver"/>
+        </Frame>
+
+
+
+
+
+    </Grid>
+</ContentPage>
