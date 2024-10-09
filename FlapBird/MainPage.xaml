@@ -7,13 +7,13 @@
         <Image Source="fundo.png"
             Aspect="AspectFit"/>
 
-        <Image Source="CanoBaixo.png"
+        <Image Source="Canobaixo2.png"
              Aspect="AspectFit"/>
 
-        <Image Source="CanoCima.png"
+        <Image Source="CanoCima2png"
              Aspect="AspectFit"/>
 
-        <Image Source="Passaro.png"
+        <Image Source="pipa2.png"
              Aspect="AspectFit"/>
 
         <Image Source="Chao.png"
