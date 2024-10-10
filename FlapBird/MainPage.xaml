@@ -3,29 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlapBird.MainPage">
 
-    <Grid>
-        <Image Source="fundo.png"
-            Aspect="AspectFit"/>
+     <Grid>
+          <Image x:Name="imgFundo"
+                 Source="fundo.png"
+                 Aspect="Fill"
+                 HorizontalOptions="Fill"
+                 VerticalOptions="Fill"/>
 
-        <Image Source="Canobaixo2.png"
-             Aspect="AspectFit"/>
+          <Image x:Name="imgBaixo"
+                 Source="canobaixo2.png"
+                 HorizontalOptions="End"
+                 VerticalOptions="End"/>
 
-        <Image Source="CanoCima2png"
-             Aspect="AspectFit"/>
+          <Image x:Name="imgCima"
+                 Source="canocima2.png"
+                 HorizontalOptions="End"
+                 VerticalOptions="Start"/>
 
-        <Image Source="pipa2.png"
-             Aspect="AspectFit"/>
+          <Image x:Name="pipaaa"
+               Source="pipaa.png"
+               HeightRequest="50"
+               WidthRequest="50"
+               HorizontalOptions="Start"/>
 
-        <Image Source="Chao.png"
-             Aspect="AspectFit"/>
+          <Image x:Name="imgChao"
+                 Source="chao.png"
+                 HorizontalOptions="Fill"
+                 VerticalOptions="End"/>
 
-        <Frame>
-            <Image Source="GameOver"/>
-        </Frame>
+          <Frame>
+               <Image Source="GameOver"/>
+          </Frame>
 
 
 
 
 
-    </Grid>
+     </Grid>
 </ContentPage>
