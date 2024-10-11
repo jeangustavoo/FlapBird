@@ -3,38 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlapBird.MainPage">
 
-     <Grid>
-          <Image x:Name="imgFundo"
-                 Source="fundo.png"
-                 Aspect="Fill"
-                 HorizontalOptions="Fill"
-                 VerticalOptions="Fill"/>
+       <Grid>
+              <Image x:Name="imgFundo"
+                     Source="fundo.png"
+                     Aspect="Fill"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill"/>
 
-          <Image x:Name="imgBaixo"
-                 Source="canobaixo2.png"
-                 HorizontalOptions="End"
-                 VerticalOptions="End"/>
+              <Image x:Name="pipaaa"
+                     Source="pipaa.png"
+                     HeightRequest="70"
+                     WidthRequest="70"
+                     HorizontalOptions="Start"/>
 
-          <Image x:Name="imgCima"
-                 Source="canocima2.png"
-                 HorizontalOptions="End"
-                 VerticalOptions="Start"/>
+              <Image x:Name="imgBaixo"
+                     Source="canobaixo2.png"
+                     HeightRequest="290"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"/>
 
-          <Image x:Name="pipaaa"
-               Source="pipaa.png"
-               HeightRequest="50"
-               WidthRequest="50"
-               HorizontalOptions="Start"/>
+              <Image x:Name="imgCima"
+                     Source="canocima2.png"
+                     HeightRequest="290"
+                     HorizontalOptions="End"
+                     VerticalOptions="Start"/>
 
-          <Image x:Name="imgChao"
-                 Source="chao.png"
-                 HorizontalOptions="Fill"
-                 VerticalOptions="End"/>
 
-          <Frame>
-               <Image Source="GameOver"/>
-          </Frame>
+              <Image x:Name="imgChao"
+                     Source="chao.png"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="End"/>
 
+              <Frame x:Name="frameGameOver"
+                     BackgroundColor="#99000000"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill">
+                  <Frame.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="OnGameOverClicked"/>
+                  </Frame.GestureRecognizers> 
+                  <Image Source="gameover.png"/>
+                        
+                  </Frame>
+
+              
+
+        
 
 
 
