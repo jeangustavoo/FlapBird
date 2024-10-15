@@ -1,14 +1,19 @@
 ﻿
+
 namespace FlapBird;
 
 public partial class MainPage : ContentPage
 {
-	const int gravidade = 30;
-	const int tempoEntreframes = 25;
+	const int gravidade = 10;
+	const int tempoEntreframes = 50;
 	bool estaMorto = true;
 	double larguraJanela = 0;
 	double AlturaJanela = 0;
 	int velocidade = 10;
+	const int maxTempoPulando = 3;
+	int TempoPulando = 0;
+	bool estaPulando = false;
+	const int forcaPulo = 30;
 
 	public MainPage()
 	{
@@ -22,9 +27,12 @@ public partial class MainPage : ContentPage
 	{
 		while (!estaMorto)
 		{
-			AplicaGravidade();
+			if (estaPulando)
+				AplicaPulo();
+			else
+				AplicaGravidade();
 			GerenciarCanos();
-			If(VerificaColisao());
+			if (VerificaColisao())
 			{
 				estaMorto = true;
 				frameGameOver.IsVisible = true;
@@ -35,11 +43,7 @@ public partial class MainPage : ContentPage
 		}
 	}
 
-	private void If(bool v)
-	{
-		throw new NotImplementedException();
-	}
-
+	
 	protected override void OnSizeAllocated(double w, double h)
 	{
 		base.OnSizeAllocated(w, h);
@@ -72,8 +76,7 @@ public partial class MainPage : ContentPage
 	{
 		if (!estaMorto)
 		{
-			if (VerificaColisaoTeto() ||
-			VerificaColisao())
+			if (VerificaColisaoTeto() || VerificaColisaoChao())
 			{
 				return true;
 			}
@@ -95,6 +98,21 @@ public partial class MainPage : ContentPage
 			return true;
 		else
 			return false;
+	}
+
+	 void AplicaPulo()
+	{
+		pipaaa.TranslationY -= forcaPulo;
+		TempoPulando++;
+		if (TempoPulando >= maxTempoPulando)
+		{
+			estaPulando = false;
+			TempoPulando = 0;
+		}
+	}
+	void OnGridClicked (object s, TappedEventArgs a)
+	{
+		estaPulando = true;
 	}
 
 
