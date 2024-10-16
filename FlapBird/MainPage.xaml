@@ -18,8 +18,8 @@
 
               <Image x:Name="pipaaa"
                      Source="pipaa.png"
-                     HeightRequest="70"
-                     WidthRequest="70"
+                     HeightRequest="100"
+                     WidthRequest="100"
                      HorizontalOptions="Start"/>
 
               <Image x:Name="imgBaixo"

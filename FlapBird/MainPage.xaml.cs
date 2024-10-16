@@ -14,6 +14,7 @@ public partial class MainPage : ContentPage
 	int TempoPulando = 0;
 	bool estaPulando = false;
 	const int forcaPulo = 30;
+	const int aberturaMinima =150;
 
 	public MainPage()
 	{
@@ -58,6 +59,10 @@ public partial class MainPage : ContentPage
 		{
 			imgBaixo.TranslationX = 0;
 			imgCima.TranslationX = 0;
+			var alturaMax =-50;
+			var alturaMin =-imgBaixo.HeightRequest;
+			imgCima.TranslationY=Random.Shared.Next((int)alturaMin, (int)alturaMax);
+			imgBaixo.TranslationY=imgCima.TranslationY+aberturaMinima;
 		}
 
 	}
