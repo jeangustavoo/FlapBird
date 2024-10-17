@@ -15,6 +15,7 @@ public partial class MainPage : ContentPage
 	bool estaPulando = false;
 	const int forcaPulo = 30;
 	const int aberturaMinima =150;
+	int score =0;
 
 	public MainPage()
 	{
@@ -63,6 +64,8 @@ public partial class MainPage : ContentPage
 			var alturaMin =-imgBaixo.HeightRequest;
 			imgCima.TranslationY=Random.Shared.Next((int)alturaMin, (int)alturaMax);
 			imgBaixo.TranslationY=imgCima.TranslationY+aberturaMinima;
+			score++;
+			labelScore.Text ="Canos:" + score.ToString("D3");
 		}
 
 	}

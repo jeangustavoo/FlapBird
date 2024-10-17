@@ -41,6 +41,10 @@
                      HorizontalOptions="Fill"
                      VerticalOptions="End"/>
 
+              <Label x:Name ="labelScore"
+                     Text ="Canos:"
+                     FontFamily="Popcat.ttf"/>
+
               <Frame x:Name="frameGameOver"
                      BackgroundColor="#99000000"
                      HorizontalOptions="Fill"
@@ -49,6 +53,8 @@
                             <TapGestureRecognizer Tapped="OnGameOverClicked"/>
                      </Frame.GestureRecognizers>
                      <Image Source="gameover.png"/>
+
+                     
 
               </Frame>
 
