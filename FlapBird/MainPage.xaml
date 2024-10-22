@@ -18,26 +18,34 @@
 
               <Image x:Name="pipaaa"
                      Source="pipaa.png"
-                     HeightRequest="100"
-                     WidthRequest="100"
-                     HorizontalOptions="Start"/>
+                     HeightRequest="80"
+                     WidthRequest="160"
+                     HorizontalOptions="Center"/>
 
               <Image x:Name="imgBaixo"
+                     IsVisible="False"
                      Source="canobaixo2.png"
-                     HeightRequest="290"
+                     HeightRequest="650"
+                     WidthRequest="100"
+                     Aspect="Fill"
+                     BackgroundColor="Red"
                      HorizontalOptions="End"
                      VerticalOptions="End"/>
 
               <Image x:Name="imgCima"
                      Source="canocima2.png"
-                     HeightRequest="290"
+                     HeightRequest="650"
+                     WidthRequest="100"
+                     Aspect="Fill"
+                     BackgroundColor="Blue"
                      HorizontalOptions="End"
                      VerticalOptions="Start"/>
 
 
               <Image x:Name="imgChao"
                      Source="chao.png"
-                     HeightRequest="120"
+                     HeightRequest="100"
+                     Aspect="AspectFill"
                      HorizontalOptions="Fill"
                      VerticalOptions="End"/>
 
